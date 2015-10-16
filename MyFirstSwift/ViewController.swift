@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
 
     @IBAction func tapEditHandler(sender: AnyObject) {
+        textField.text = "Edited!";
     }
 
     override func viewDidLoad() {
