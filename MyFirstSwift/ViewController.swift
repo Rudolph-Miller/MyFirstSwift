@@ -16,6 +16,23 @@ class ViewController: UIViewController {
         textField.text = "Edited!";
     }
 
+    @IBOutlet weak var segmented: UISegmentedControl!
+
+    @IBAction func tapSegmentedHandler(sender: AnyObject) {
+        switch segmented.selectedSegmentIndex
+        {
+        case 0:
+            textField.text = "One!";
+        case 1:
+            textField.text = "Two!";
+        case 2:
+            textField.text = "Three!";
+        default:
+            break;
+        }
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

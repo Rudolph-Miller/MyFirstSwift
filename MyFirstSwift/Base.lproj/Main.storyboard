@@ -30,12 +30,25 @@
                                     <action selector="tapEditHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GpQ-Az-Vze"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="kTe-uK-wbO">
+                                <rect key="frame" x="60" y="340" width="200" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Three"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tapSegmentedHandler:" destination="BYZ-38-t0r" eventType="valueChanged" id="qWD-jf-fkB"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="segmented" destination="kTe-uK-wbO" id="cLs-Gg-xv2"/>
                         <outlet property="textField" destination="KsD-jn-byL" id="3de-Qs-upJ"/>
                     </connections>
                 </viewController>
