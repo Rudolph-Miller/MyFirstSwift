@@ -62,7 +62,7 @@
                                 <animations/>
                                 <state key="normal" title="ModalView"/>
                                 <connections>
-                                    <segue destination="zuL-YT-I1Q" kind="presentation" id="hkS-BF-jZb"/>
+                                    <segue destination="zuL-YT-I1Q" kind="presentation" modalTransitionStyle="flipHorizontal" id="hkS-BF-jZb"/>
                                 </connections>
                             </button>
                         </subviews>
