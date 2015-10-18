@@ -50,11 +50,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFJ-WI-5Tl">
-                                <rect key="frame" x="130" y="473" width="60" height="30"/>
+                                <rect key="frame" x="130" y="412" width="60" height="30"/>
                                 <animations/>
                                 <state key="normal" title="SubView"/>
                                 <connections>
                                     <segue destination="vfQ-QL-OPd" kind="show" id="xGA-pp-1nQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHz-0K-aQn">
+                                <rect key="frame" x="122" y="472" width="76" height="30"/>
+                                <animations/>
+                                <state key="normal" title="ModalView"/>
+                                <connections>
+                                    <segue destination="zuL-YT-I1Q" kind="presentation" id="hkS-BF-jZb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,6 +116,48 @@
             </objects>
             <point key="canvasLocation" x="1531" y="135"/>
         </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="NKo-Fu-LMz">
+            <objects>
+                <viewController id="Cae-hY-k62" customClass="ModalViewController" customModule="MyFirstSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6F0-0S-JWD"/>
+                        <viewControllerLayoutGuide type="bottom" id="e2N-4R-2n7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DPk-Ev-IcT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ModalView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fum-fd-vkX">
+                                <rect key="frame" x="118" y="182" width="85" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="v2C-7F-yxr">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="7JP-pf-U0L">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ffE-08-RUK">
+                                <rect key="frame" x="16" y="7" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonHandler:" destination="Cae-hY-k62" eventType="touchUpInside" id="gUV-0w-4aM"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHD-29-jgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="818"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ayg-Z3-61f">
             <objects>
@@ -126,6 +176,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYL-oc-lI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="364" y="135"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cso-oU-36U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zuL-YT-I1Q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cmO-KL-FbG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cae-hY-k62" kind="relationship" relationship="rootViewController" id="CvG-0V-Nza"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ouD-9w-eSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176" y="818"/>
         </scene>
     </scenes>
 </document>
